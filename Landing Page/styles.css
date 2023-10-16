@@ -1,0 +1,363 @@
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+body.sections-hidden #nav-list {
+  display: none;
+}
+
+body.sections-hidden #mobile-icon.active + #nav-list {
+  display: flex;
+}
+
+header {
+  background-color: #6f50cc;
+  color: white;
+  text-align: center;
+  width: 100%;
+  top: 0;
+  position: sticky;
+  z-index: 999;
+
+}
+.content {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 1rem 0;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+#mobile-icon {
+  display: none;
+  cursor: pointer;
+  color: white;
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  padding: 1rem;
+  margin-right: 20px;
+}
+
+nav ul li:hover {
+  color: blue;
+  cursor: pointer;
+}
+
+nav ul a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+nav ul a:hover {
+  color: #ffd700;
+}
+
+section {
+  padding-top: 70px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin-top: 1rem;
+}
+
+label {
+  margin-bottom: 0.5rem;
+}
+
+input,
+button {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+
+button {
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+.error {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+}
+
+
+
+#benefits {
+  background-color: #f8f8f8;
+  padding: 2rem;
+  text-align: center;
+}
+
+.benefit-card {
+  max-width: 300px;
+  margin: 1rem;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+.benefit-container {
+  display: flex;
+  justify-content: center;
+}
+
+.benefit-card:hover {
+  transform: scale(1.05);
+}
+
+#benefits img {
+  width: 100%;
+  height: 300px;
+  border-bottom: 1px solid #ddd;
+}
+
+#benefits h3 {
+  color: #333;
+  margin: 1rem 0;
+}
+
+#benefits p {
+  color: #666;
+  padding: 0 1rem 1rem;
+}
+
+/* testimonials css */
+
+#testimonials {
+  background-color: #f8f8f8;
+  padding: 2rem;
+  text-align: center;
+}
+.testimonials-container{
+  display: flex;
+  justify-content: center;
+}
+.testimonial-card {
+  max-width: 300px;
+  margin: 1rem;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.testimonial-card:hover {
+  transform: scale(1.05);
+}
+
+#testimonials img {
+  width: 100%;
+  height: 300px;
+  border-bottom: 1px solid #ddd;
+}
+
+#testimonials blockquote {
+  padding: 1rem;
+}
+
+#testimonials p {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+#testimonials cite {
+  color: #666;
+}
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+  #nav-list {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #6f50cc;
+    text-align: center;
+  }
+
+  #nav-list.active,
+  #mobile-icon.active + #nav-list {
+    display: flex;
+  }
+
+  #mobile-icon {
+    display: block;
+  }
+  .content {
+    align-items: center;
+  }
+  #product-bio img {
+    margin-right: 0;
+    margin-bottom: 20px;
+    max-width: 100%;
+  }
+  .product-bio-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .benefit-card {
+    margin-bottom: 20px;
+  }
+  .benefit-container ,.testimonials-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .testimonial-card {
+    margin-bottom: 20px;
+  }
+  .newsletter-form {
+    max-width: 90%;
+}
+
+}
+
+
+/* Contact */
+
+.contact , h1{
+  text-align: center;
+}
+
+#product-bio {
+  width: 100vw;
+  height: 600px;
+  background-image: url(images/background.jpg); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  
+}
+
+.product-bio-content {
+  max-width: 800px;
+}
+
+.product-description {
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.product-description h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.product-description p {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+
+.product-description button {
+  background-color: #3498db; 
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.product-description button:hover {
+  background-color: #2980b9; 
+}
+
+#contact {
+
+  padding: 40px 20px;
+  text-align: center;
+  color: #333; 
+}
+
+.contact h2 {
+  color: #333; 
+}
+
+.newsletter-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #999ad2; 
+}
+
+.newsletter-form h2 {
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 8px;
+  color: #555;
+}
+
+input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box; 
+}
+
+.form-button {
+  background-color: #3498db; 
+  color: #fff; 
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-button:hover {
+  background-color: #2980b9; 
+}

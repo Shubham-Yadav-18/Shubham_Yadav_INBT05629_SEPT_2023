@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Product Landing Page</title>
+  </head>
+  <body>
+    <header>
+      <div class="content">
+        <h1>Hynstic Watch</h1>
+        <nav>
+          <div id="mobile-icon" onclick="toggleNav()">☰</div>
+          <ul id="nav-list">
+            <li><a href="#product-bio" onclick="hideNav()">Bio</a></li>
+            <li><a href="#benefits" onclick="hideNav()">Benefits</a></li>
+            <li><a href="#testimonials" onclick="hideNav()">Testimonials</a></li>
+            <li><a href="#contact" onclick="hideNav()">Contacts</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section id="product-bio">
+      <div class="product-bio-content">
+        <div class="product-description">
+          <h2>Watch</h2>
+          <p>
+            Welcome to our collection of meticulously crafted timepieces, where sophistication meets functionality. Each watch in our selection is a testament to the artistry of watchmaking, blending precision engineering with timeless design.
+          </p>
+          <p>Price: 2499Rs</p>
+          <button>Add to Cart</button>
+        </div>
+        <!-- <img src="./images/aboutWatch.jpg" alt="Product Image" /> -->
+      </div>
+    </section>
+
+    <section id="benefits">
+      <h2>Benefits</h2>
+      <div class="benefit-container">
+        <div class="benefit-card">
+          <img src="images/benefit1.jpg" alt="Benefit 1" />
+          <h3>Waterproof Design</h3>
+          <p>
+            Perfect for any adventure, our watches are designed to be waterproof
+            and durable.
+          </p>
+        </div>
+
+        <div class="benefit-card">
+          <img src="images/benefit2.jpg" alt="Benefit 2" />
+          <h3>Timeless Style</h3>
+          <p>
+            With a classic and timeless design, our watches complement any
+            outfit or occasion.
+          </p>
+        </div>
+
+        <div class="benefit-card">
+          <img src="images/benefit3.jpeg" alt="Benefit 3" />
+          <h3>Precision Engineering</h3>
+          <p>
+            Experience precise timekeeping with our watches, crafted with
+            precision engineering.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials">
+      <h2>Customer Testimonials</h2>
+      <div class="testimonials-container">
+      <div class="testimonial-card">
+        <img src="images/testmonial1.jpg" alt="User 1">
+        <blockquote>
+            <p>"The watch exceeded my expectations. It's stylish, comfortable, and incredibly accurate."</p>
+            <cite>- Vivek Sharma</cite>
+        </blockquote>
+    </div>
+
+    <div class="testimonial-card">
+        <img src="images/testimonial2.jpeg" alt="User 2">
+        <blockquote>
+            <p>"I love the attention to detail in every aspect of the watch. Truly a work of art."</p>
+            <cite>- Ram Mohan</cite>
+        </blockquote>
+    </div>
+
+    <div class="testimonial-card">
+        <img src="images/testimonial3.webp" alt="User 3">
+        <blockquote>
+            <p>"This watch is not just a timepiece; it's a statement. I receive compliments everywhere I go."</p>
+            <cite>- Anuj Kumar</cite>
+        </blockquote>
+    </div>
+  </div>
+    </section>
+    
+   
+
+    <section id="contact" class="contact">
+      <h2 >Contact Information</h2>
+      <h2>Subscribe to Our Newsletter</h2>
+    
+        <div class="newsletter-form">
+            <form class="newsletter-form" onsubmit="validateForm(event)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <button class="form-button" type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    
+
+    <script src="script.js"></script>
+  </body>
+</html>
